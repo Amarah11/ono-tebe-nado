@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -12,8 +12,8 @@ body {
   width: 1100px;
   margin: 0 auto;
   font-family: Raleway, sans-serif;
-  line-height: 24px;
   font-size: 20px;
+  line-height: 24px;
 }
 
 h1,
@@ -37,10 +37,10 @@ a {
   cursor: pointer;
 }
 
-a:hover{
-  color: chocolate;
+a:hover {
   border: none;
   border-bottom: 1.5px solid chocolate;
+  color: chocolate;
 
 }
 
@@ -48,10 +48,10 @@ img {
   width: 100%;
 }
 
-li{
+li {
   list-style-type: none;
 }
 
-address{
+address {
   font-style: normal;
 }
