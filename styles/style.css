@@ -3,7 +3,8 @@
   text-transform: uppercase;
 }
 
-.active-link:hover{
+.website__menu-link_active:hover, 
+.footer__social-link:hover{
   border: none;
   color: black;
 }
@@ -26,39 +27,47 @@
 /* общий блок website-menu */
 
 .website__menu{
-  flex-grow: 2;
   font-size: 18px;
 }
 
 .website__menu-list{
   display: flex;
-  gap: 24px;
+  gap: 25px;
+}
+
+.website__menu-list-item{
+  margin-left: 5px;
+  padding-left: 3px;
+  letter-spacing: 0.001vw;
+  word-spacing: 1px;
   list-style-type: circle;
 }
 
-.website__menu-item{
-  list-style-type: circle;
-}
-
-.website__menu-item-active{
+.website__menu-list-item-active{
   list-style-type: none;
 }
 
 .website__contact-list{
-  max-width: 200px;
+  justify-self: end;
+  align-self: center;
+  max-width: 240px;
+  margin-right: 48px;
   font-size: 18px;
+  line-height: 24.3px;
+  letter-spacing: 0.003vw;
+  word-spacing: 1px;
 }
 
 /* свойства для header */
 
 .header{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 130px 1fr;
+  justify-items: end;
+  justify-content: center;
   align-items: center;
-  padding: 92px 50px 96px;
-}
-
-.header__logo{
-  flex-grow: 8;
+  gap: 42px;
+  padding: 92px 0 90px;
 }
 
 .header__logo:hover{
@@ -86,56 +95,63 @@
   padding-left: 50px;
   font-weight: 700;
   font-size: 100px;
-  line-height: 115%;
+  line-height: 124%;
   letter-spacing: 0.3em;
 }
 
-.cover__container{
+.cover__description{
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 140px;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.cover__text{
+.cover__description-text{
+  margin-top: 130px;
+  margin-left: 78px;
   font-size: 22px;
   line-height: 28px;
-  word-spacing: 1em;
+  word-spacing: 0.86em;
 }
 
-.cover__button{
-  margin-top: -0px;
+.bet-button{
+  width: 256px;
+  height: 51px;
+  margin-right: 50px;
   border: 1px solid white;
-  padding: 12px 32px;
+  padding-top: 11px;
+  padding-left: 31px;
   color: inherit;
   font-size: 22px;
-  line-height: 28px;
+  line-height: 26px;
   text-transform: uppercase;
-  word-spacing: 1em;
+  word-spacing: 0em;
   background: none;
 }
 
-.cover__button:hover{
+.bet-button:hover{
   border: 2px solid chocolate;
-  padding: 11px 30.5px;
+  padding: 11px 29px;
   color: chocolate;
 }
 
 /* стилизация заголовка "Оно тебе надо" */
 
-.accent-span{
+.no-letter-spacing{
   display: block;
 }
 
-.accent-span-symbol{
-  letter-spacing: 0.7em;
+.letter-spacing-extended{
+  letter-spacing: 0.6em;
 } 
 
-.text-center{
+.aligned-text_center{
+  margin-right: 40px;
   text-align: center;
+
 }
 
-.text-right{
+.aligned-text_right{
+  margin-right: 20px;
   text-align: right;
 }
 
@@ -146,31 +162,31 @@
   padding-top: 179px;
 }
 
-.lots__title{
+.lots__heading{
   margin-bottom: 27px;
   margin-left: 64px;
 }
 
-.lots__list{
+.lots__card-list{
   display: flex;
   gap: 25px;
   margin: 0 24px;
   margin-bottom: 32px;
 }
 
-.lots__card{
+.card{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 51px 40px 48px;
 }
 
-.lots__card:hover{
+.card:hover{
   background: rgba(0, 0, 0, .5);
   transition: 0.1s;
 }
 
-.lots__item{
+.lots__card-list-item{
   min-width: 334px;
   height: 563px;
   background-position: center;
@@ -178,35 +194,33 @@
   cursor: pointer;
 }
 
-.lots__item-title{
+.card__title{
   font-weight: bold;
   font-size: 22px;
   line-height: 130%;
-  text-decoration: underline;
-  text-decoration: none;;
 }
 
-.lots__item-title-part{
-  border-bottom: 1px solid white;
+.card__title-part{
+  border-bottom: 1.2px solid white;
 }
 
-.lots__item-1{
+.card_type_film{
   background-image: url(../images/card-lot-01.jpg);
 }
 
-.lots__item-2{
+.card_type_book{
   background-image: url(../images/card-lot-02.jpg);
 }
 
-.lots__item-3{
+.card_type_picture{
   background-image: url(../images/card-lot-03.jpg);
 }
 
-.lots__item-text{
+.card__text{
   text-transform: none;
 }
 
-.lots__link{
+.lots__look-more-link{
   margin-left: 40px;
   border-bottom: 1.5px solid black;
   font-size: 20px;
@@ -223,13 +237,17 @@
   margin: 24px;
 }
 
-.about__image-cover{
+.about__logo-cover{
   width: 240px;
   border-radius: 100%;
   background-color: #000;
 }
 
-.about__image{
+.about__logo:hover{
+  border: none;
+}
+
+.about__logo-image{
   padding: 65px 48px 62px 51px;
 }
 
@@ -238,13 +256,10 @@
 }
 
 .about__text{
-  max-width: 688px;
-}
-
-.about__paragraphs{
   display: flex;
   flex-direction: column;
   gap: 24px;
+  max-width: 688px;
 }
 
 /* свойства секции footer */
@@ -261,12 +276,12 @@
   gap: 0;
 }
 
-.footer__icon-list{
+.footer__social-list{
   display: flex;
   gap: 48px;
 }
 
-.footer__icon-image{
+.footer__social-icon{
   width: 48px;
   height: 48px;  
 }

@@ -51,3 +51,7 @@ img {
 li{
   list-style-type: none;
 }
+
+address{
+  font-style: normal;
+}
